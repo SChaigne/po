@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PPEComponent implements OnInit {
 
+  cheminImage:any = 'img/vehiparc.png';
+
   constructor() { }
 
   ngOnInit(): void {
