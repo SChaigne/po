@@ -1,31 +1,48 @@
 <body>
-<nav class="navbar navbar-dark bg-dark">
-  <ul class="nav justify-content-center">
-    <li class="nav-item">
-      <a class="nav-link text-danger" routerLink="">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="leBTS">BTS SIO</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="lesPPE">Projets</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="lesCompetences">Compétences</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link " routerLink="laVeille">Veille</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link " routerLink="leContact">Contact</a>
-    </li>
-  </ul>
-</nav>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <router-outlet></router-outlet>
+  <!-- <style>
+    body  {
+      background-image: url("assets/img/Fond_stelaire.png");
+    }
+    </style> -->
+  <nav class="navbar navbar-dark bg-dark barreNav">
+    <ul class="nav justify-content-center">
+      <li class="nav-item menu-blanc">
+        <a class="nav-link" routerLink="">
+          <h5><u>Accueil</u></h5>
+        </a>
+      </li>
+      <li class="nav-item menu-blanc">
+        <a class="nav-link" routerLink="leBTS">
+          <h5>BTS SIO</h5>
+        </a>
+      </li>
+      <li class="nav-item menu-blanc">
+        <a class="nav-link" routerLink="lesPPE">
+          <h5>Projets</h5>
+        </a>
+      </li>
+      <li class="nav-item menu-blanc">
+        <a class="nav-link" routerLink="lesCompetences">
+          <h5>Compétences</h5>
+        </a>
+      </li>
+      <li class="nav-item menu-blanc">
+        <a class="nav-link" routerLink="laVeille">
+          <h5>Veille</h5>
+        </a>
+      </li>
+      <li class="nav-item menu-blanc">
+        <a class="nav-link" routerLink="leContact">
+          <h5>Contact</h5>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </div>
-</div>
 </body>

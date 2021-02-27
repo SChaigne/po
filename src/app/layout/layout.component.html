@@ -1,4 +1,39 @@
-<p>layout works!</p>
-Ceci est mon PORTFOLIO
+<h1 id="titre" class="d-flex justify-content-center retroshadow">CHAIGNE Stéphane <br><br>vous souhaite la bienvenue sur
+    son portfolio ... <span class="clignote">&nbsp; &nbsp; |</span> </h1>
+<h1 id="titre" class="d-flex justify-content-center retroshadow"></h1>
+<div class="d-flex justify-content-center">
+    <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="card-body">
+            <h5 class="card-title">Ma présentation</h5>
+            <p class="card-text">
+                Je suis CHAIGNE Stéphane, étudiant en <a routerLink="leBTS">BTS SIO - Option SLAM</a> en alternance avec
+                l'entreprise <a target="_blank" href="https://tinyurl.com/2vrhf7bb">
+                    CSMSI - LA POSTE</a> sur le projet <a target="_blank"
+                    href="https://www.vehiparc.fr/login">Véhiparc</a>
 
-<footer>salut</footer>
+            </p>
+        </div>
+    </div>
+</div>
+Faire la timeline des mon CV<br>
+A Gauche la partie pro / a droite la partie ecole ( vu que c'est le même année)
+<p-timeline [value]="events1" styleClass="customized-timeline">
+    <ng-template pTemplate="marker"></ng-template>
+    <ng-template pTemplate="opposite" let-event>
+        <p-card [header]="event.status" [subheader]="event.date">
+            <p>blablabla</p>
+        </p-card>
+    </ng-template>
+    <ng-template pTemplate="marker" let-event>
+        <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
+            <i [ngClass]="event.icon"></i>
+        </span>
+    </ng-template>
+    <ng-template pTemplate="content" let-event>
+        <p-card class="card shadow-lg" [header]="event.status" [subheader]="event.date">
+            <ul style="list-style-type:none;">
+                <li *ngFor="let message of event.messages">{{message}}</li>
+            </ul>
+        </p-card>
+    </ng-template>
+</p-timeline>

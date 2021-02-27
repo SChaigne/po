@@ -40,7 +40,7 @@
         </span>
     </ng-template>
     <ng-template pTemplate="content" let-event>
-        <p-card class="card shadow-lg" [header]="event.status" [subheader]="event.date">
+        <p-card class="card shadow-lg" [header]="event.status" [subheader]="event.diplome">
             <ul style="list-style-type:none;">
                 <li *ngFor="let message of event.messages">{{message}}</li>
             </ul>

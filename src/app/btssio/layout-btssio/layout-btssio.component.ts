@@ -7,9 +7,8 @@ import { PrimeIcons } from 'primeng/api';
   styleUrls: ['./layout-btssio.component.scss'],
 })
 export class LayoutBtssioComponent implements OnInit {
-  events1: any[] = [];
 
-  events2: any[] = [];
+  events1: any[] = [];
 
   constructor() { }
 
@@ -17,7 +16,7 @@ export class LayoutBtssioComponent implements OnInit {
     this.events1 = [
       {
         status: 'Première Année',
-        date: 'De BTS SIO',
+        diplome: 'De BTS SIO',
         icon: PrimeIcons.CALENDAR,
         color: '#212529',
         messages: ["Culture Générale & Expression",
@@ -32,7 +31,7 @@ export class LayoutBtssioComponent implements OnInit {
       },
       {
         status: 'Deuxième Année',
-        date: 'De BTS SIO',
+        diplome: 'De BTS SIO',
         icon: PrimeIcons.CALENDAR,
         color: '#212529',
         messages: ["Culture Générale & Expression",
@@ -46,7 +45,5 @@ export class LayoutBtssioComponent implements OnInit {
         ]
       },
     ];
-
-    this.events2 = ['2020', '2021', '2022', '2023'];
   }
 }
