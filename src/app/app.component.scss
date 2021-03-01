@@ -1,6 +1,3 @@
-// .body {
-//     background: url("assets/img/Fond_stelaire.png");
-// }
 .navbar {
     display: block;
 }
@@ -23,10 +20,11 @@
 .menu-blanc{
     color: white;
     margin-left: 0.5rem ;
+    
+    transition: all 0.7s ease-out ;
 }
 
 .menu-blanc:hover{
     border-radius: 5rem; 
-    transition: 1s ;
     background-color: white;
 }

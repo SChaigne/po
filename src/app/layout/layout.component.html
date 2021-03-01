@@ -1,6 +1,6 @@
-<h1 id="titre" class="d-flex justify-content-center retroshadow">CHAIGNE Stéphane <br><br>vous souhaite la bienvenue sur
-    son portfolio ... <span class="clignote">&nbsp; &nbsp; |</span> </h1>
-<h1 id="titre" class="d-flex justify-content-center retroshadow"></h1>
+<h1 id="titre" class="retroshadow">CHAIGNE Stéphane <br><br>vous souhaite la bienvenue sur
+    son portfolio ...<span class="clignote">|</span> </h1>
+
 <div class="d-flex justify-content-center">
     <div class="card shadow-lg p-3 mb-5 bg-white rounded">
         <div class="card-body">
@@ -8,16 +8,14 @@
             <p class="card-text">
                 Je suis CHAIGNE Stéphane, étudiant en <a routerLink="leBTS">BTS SIO - Option SLAM</a> en alternance avec
                 l'entreprise <a target="_blank" href="https://tinyurl.com/2vrhf7bb">
-                    CSMSI - LA POSTE</a> sur le projet <a target="_blank"
-                    href="https://www.vehiparc.fr/login">Véhiparc</a>
-
+                    CSMSI - LA POSTE</a>
             </p>
         </div>
     </div>
 </div>
 Faire la timeline des mon CV<br>
 A Gauche la partie pro / a droite la partie ecole ( vu que c'est le même année)
-<p-timeline [value]="events1" styleClass="customized-timeline">
+<p-timeline [value]="eventCours" styleClass="customized-timeline">
     <ng-template pTemplate="marker"></ng-template>
     <ng-template pTemplate="opposite" let-event>
         <p-card [header]="event.status" [subheader]="event.date">

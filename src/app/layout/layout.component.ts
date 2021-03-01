@@ -8,15 +8,19 @@ import { PrimeIcons } from 'primeng/api';
 })
 export class LayoutComponent implements OnInit {
 
-  events1: any[] = []
+  eventCours: any[] = []
 
   constructor() { }
 
   ngOnInit(): void {
-    this.events1 = [
+
+    // $("#titre").hide(0);
+    // $("#titre").show("fade",2500);
+
+    this.eventCours = [
       {
-        status: 'Première Année',
-        date: 'De BTS SIO',
+        status: 'BTS SIO',
+        date: 'D',
         icon: PrimeIcons.CALENDAR,
         color: '#212529',
         messages: ["Culture Générale & Expression",

@@ -1,0 +1,24 @@
+.choixPage {
+    background-color: #212529;
+    border-radius: 5rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.7s ease-out;
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+}
+.choixPage:hover {
+    background-color: white;
+    border-color: #212529;
+    a {
+        color: #212529;
+    }
+}
+
+.positionboutton {
+    margin-top: 3rem;
+    margin-right: 3rem;
+}
