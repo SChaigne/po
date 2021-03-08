@@ -1,7 +1,8 @@
 <h1 id="titre" class="d-flex justify-content-center">Présention des projets </h1>
-<div class="row d-flex justify-content-center">
-    <div class="col-md-3 col-sm-6">
-        <div class="card">
+<div class="row d-flex justify-content-center mb-5">
+
+    <div class="col-md-3 col-sm-6 card-projet" (click)="onItemClick($event, 'PortFolio')">
+        <div class="card shadow-lg">
             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 <img src="assets/img/portfolio.png" class="img-fluid" />
             </div>
@@ -12,8 +13,8 @@
             </div>
         </div>
     </div>
-    <div class="col-md-3 col-sm-6">
-        <div class="card">
+    <div class="col-md-3 col-sm-6 card-projet" (click)="onItemClick($event, 'Vehiparc')">
+        <div class="card shadow-lg">
             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 <img src="assets/img/vehiparc.png" class="img-fluid" />
             </div>
@@ -25,43 +26,100 @@
             </div>
         </div>
     </div>
-    <div class="col-md-3 col-sm-6">
-        <div class="card">
+    <div class="col-md-3 col-sm-6 card-projet" (click)="onItemClick($event, 'AppMobile')">
+        <div class="card shadow-lg">
             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="img-fluid" />
             </div>
             <div class="card-body">
                 <h5 class="card-title">Application Mobile pour infirmier</h5>
-                <p class="card-text">bzgzf
+                <p class="card-text">Application afin d'aider les infirmier à gérer leurs rendez-vous
                 </p>
             </div>
         </div>
     </div>
 </div>
-<div>Quand vous cliquez sur une card, vous aurez le descriptif du projet en question avec l'aide d'un ngSwitchCase
-</div>
-<div class="d-flex">
-    <div class="card shadow-lg p-3 mb-5 bg-white rounded">
-        <div class="card-body">
-            <h5 class="card-title">Véhiparc</h5>
-            <p class="card-text">Véhiparc est une application Web permettant la gestion de flotte de véhicule
-                d'entreprise. Le developpement est réalisé par le CSMSI - LA POST, la maitrise d'ouvrage est une branche
-                de La Poste -> Vehiposte.
-                <br>Ce projet est réaliser avec le framework Angular.
-                <br>Le versionning est gérer par GitLab.
-                <br>
-            </p>
+<!-- <div *ngIf="vretour" class="A METTRE UNE ANIMATION">
+    <div class="d-flex">
+        <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+            <div class="card-body">
+                <h5 class="card-title">Véhiparc</h5>
+                <p class="card-text">Véhiparc est une application Web permettant la gestion de flotte de véhicule
+                    d'entreprise. Le developpement est réalisé par le CSMSI - LA POST, la maitrise d'ouvrage est une
+                    branche
+                    de La Poste -> Vehiposte.
+                    <br>Ce projet est réaliser avec le framework Angular.
+                    <br>Le versionning est gérer par GitLab.
+                    <br>
+                </p>
+            </div>
         </div>
     </div>
-</div>
-<button class="buttonRedirect">
-    <a href="https://www.vehiparc.fr/">
-        Véhiparc
-    </a>
-</button>
+    <button class="buttonRedirect">
+        <a href="https://www.vehiparc.fr/">
+            Véhiparc
+        </a>
+    </button>
+</div> -->
 
-<!-- <container-element [ngSwitch]="switch_active">
-    <some-element *ngSwitchCase="active"></some-element>
-    <some-element *ngSwitchCase="active"></some-element>
-    <some-element *ngSwitchCase="active"></some-element>Ouiass
-</container-element> -->
+<div [ngSwitch]="vretour">
+    <div *ngSwitchCase="'PortFolio'">
+
+        <div class="d-flex">
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                    <h5 class="card-title">Application Mobile</h5>
+                    <p class="card-text">
+                        PortFolio est un site CV permettant la présentation de mes compétences techniques du web. Il a
+                        été réalisé pour le diplôme du BTS SIO ainsi que l'inscription à la licence pro DIWA.
+                        <br>Ce projet est réaliser avec le framework Angular.
+                        <br>Le versionning est gérer par GitLab.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngSwitchCase="'Vehiparc'">
+        <div class="d-flex">
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                    <h5 class="card-title">Véhiparc</h5>
+                    <p class="card-text">Véhiparc est une application Web permettant la gestion de flotte de véhicule
+                        d'entreprise. Le developpement est réalisé par le CSMSI - LA POST, la maitrise d'ouvrage est une
+                        branche
+                        de La Poste -> Vehiposte.
+                        <br>Ce projet est réaliser avec le framework Angular.
+                        <br>Le versionning est gérer par GitLab.
+                        <br>
+                    </p>
+                    <div style="text-align: right;">
+                        <button class="buttonRedirect">
+                            <a href="https://www.vehiparc.fr/" target="blanc">
+                                Véhiparc
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngSwitchCase="'AppMobile'">
+        <div class="d-flex">
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                    <h5 class="card-title">Application Mobile</h5>
+                    <p class="card-text">
+                        Application mobile est une application Mobile permettant la gestion des rendez-vous pour les
+                        infirmier à domicile. Ce projet à été réaliser dans le cadre de PPE (Projet Personnel Encadré)
+                        au sein de l'établissement scolaire "Lycée Carcouët"
+                        <br> Ce projet est réaliser avec le framework Flutter qui utilise le langage Dart.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngSwitchDefault></div>
+</div>

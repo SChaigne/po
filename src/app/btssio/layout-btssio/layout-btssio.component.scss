@@ -10,7 +10,7 @@ div [class^="col-"] {
 }
 .card {
   transition: 0.5s;
-  
+
   margin-bottom: 2rem;
 }
 .card-title {
@@ -156,6 +156,11 @@ div [class^="col-"] {
       .p-card-body:focus::after {
         transform: scale3d(1, 1, 1);
       }
+
+
     }
   }
+}
+.p-timeline.p-timeline-vertical .p-timeline-event-connector {
+  background-color: red;
 }

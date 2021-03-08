@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-layout-veille',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutVeilleComponent implements OnInit {
 
-  constructor() { }
+  pageAfficher: boolean = false;
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+
+    }
+
+  
+  
+
+
+  changePage(){
+    if(this.router.url.endsWith("/Juridique")){
+      this.pageAfficher = true
+    }
+    if(this.router.url.endsWith("/Technologique")){
+      this.pageAfficher = true
+    }
   }
 
 }

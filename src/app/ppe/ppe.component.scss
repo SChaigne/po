@@ -86,4 +86,9 @@ div [class^="col-"] {
 .card:focus::after {
   transform: scale3d(1, 1, 1);
 }
+
+.card-projet {
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
 //-------------------------

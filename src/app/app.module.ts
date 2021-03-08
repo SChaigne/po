@@ -29,6 +29,7 @@ const appRoutes: Routes = [
   },
   { path: 'Contact', component: LayoutContactComponent },
   { path: 'BTS', component: LayoutBtssioComponent },
+  { path: 'Accueil', component: LayoutComponent },
   { path: '', component: LayoutComponent },
 ];
 @NgModule({

@@ -7,11 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PPEComponent implements OnInit {
 
-  cheminImage:any = 'img/vehiparc.png';
+  projects: any[] = [];
+  cheminImage: any = 'img/vehiparc.png';
+  vretour: string = "";
 
   constructor() { }
 
   ngOnInit(): void {
+    this.projects = [{
+      picture: "assets/img/portfolio.png",
+      title: "PortFolio",
+      content: "Portfolio réalisé pour le diplôme du BTS SIO"
+    }, {
+      picture: "assets/img/vehiparc.png",
+      title: "Véhiparc",
+      content: "WebApp qui permet la gestion de flotte de véhicule d'entreprise"
+    }, {
+      picture: "https://mdbootstrap.com/img/new/standard/nature/111.jpg",
+      title: "Application Mobile pour infirmier",
+      content: "Application afin d'aider les infirmier à gérer leurs rendez-vous"
+    }
+    ]
+  }
+
+  onItemClick(event: any, item: any) {
+    this.vretour = item;
   }
 
 }

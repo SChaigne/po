@@ -1,12 +1,22 @@
 <h1 id="titre" class="d-flex justify-content-center">Présention des veilles </h1>
-<div class="d-flex justify-content-center"><button class="choixPage positionboutton"><a
+<div class="d-flex justify-content-center">
+    <button id="Technologique" class="choixPage positionboutton" (click)="changePage()"><a
             routerLink="Technologique">Technologique</a></button>
 
-    <button class="choixPage positionboutton"><a routerLink="Juridique">Juridique</a></button>
+    <button id="Juridique" class="choixPage positionboutton" (click)="changePage()"><a
+            routerLink="Juridique">Juridique</a></button>
 </div>
-<!-- <div ngIf="laRoute"> -->
+<div class="d-flex justify-content-center positiondefinition">
+    <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="card-body">
+            <h5 class="card-title">La veille : Definition</h5>
+            <p class="card-text">La veille dans une entreprise, un organisme est l'activité consistant à se tenir informé des innovations dans le secteur les concernant.</p>
+        </div>
+    </div>
+</div>
+<div *ngIf="!pageAfficher">
     <label class="d-flex justify-content-center retroshadow">
         Choissisez la veille que vous souhaitez consulter
     </label>
-<!-- </div> -->
+</div>
 <router-outlet></router-outlet>
