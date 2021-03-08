@@ -21,10 +21,10 @@ const appRoutes: Routes = [
   { path: 'Projets', component: PPEComponent },
   { path: 'Competences', component: LayoutCompetencesComponent },
   {
-    path: 'Veille', component: LayoutVeilleComponent, 
+    path: 'Veille', component: LayoutVeilleComponent,
     children: [
-      {path : 'Juridique' , component : VJuridiqueComponent },
-      {path : 'Technologique' , component : VTechnoComponent}
+      { path: 'Juridique', component: VJuridiqueComponent },
+      { path: 'Technologique', component: VTechnoComponent }
     ]
   },
   { path: 'Contact', component: LayoutContactComponent },

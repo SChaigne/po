@@ -1,0 +1,36 @@
+label {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+
+    &.retroshadow {
+        color: #2c2c2c;
+        background-color: white;
+        letter-spacing: 0.05em;
+        text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+    }
+}
+
+a{
+    margin: 1.5rem 0 0 0;
+    text-decoration: none;
+    color: #2c2c2c;
+}
+
+.position-global{
+    margin-top: 11rem;
+}
+
+.position-text{
+    margin: 1rem 0 0 0;
+}
+
+img{
+    margin: 0 3rem 0 0;
+}
+
+#linkedin{
+    margin-top: 1.5rem;
+}
