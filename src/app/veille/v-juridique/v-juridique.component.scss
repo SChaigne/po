@@ -1,0 +1,22 @@
+label {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+
+    &.retroshadow {
+        color: #2c2c2c;
+        background-color: white;
+        letter-spacing: 0.05em;
+        text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.les-definitions {
+    margin-top: 1.5rem;
+}
+
+.la-definition {
+    width: 50%;
+}

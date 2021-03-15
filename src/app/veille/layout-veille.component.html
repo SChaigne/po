@@ -6,17 +6,12 @@
     <button id="Juridique" class="choixPage positionboutton" (click)="changePage()"><a
             routerLink="Juridique">Juridique</a></button>
 </div>
-<div class="d-flex justify-content-center positiondefinition">
-    <div class="card shadow-lg p-3 mb-5 bg-white rounded">
-        <div class="card-body">
-            <h5 class="card-title">La veille : Definition</h5>
-            <p class="card-text">La veille dans une entreprise, un organisme est l'activité consistant à se tenir informé des innovations dans le secteur les concernant.</p>
-        </div>
-    </div>
-</div>
+
 <div *ngIf="!pageAfficher">
     <label class="d-flex justify-content-center retroshadow">
         Choissisez la veille que vous souhaitez consulter
     </label>
 </div>
-<router-outlet></router-outlet>
+<div *ngIf="pageAfficher">
+    <router-outlet></router-outlet>
+</div>

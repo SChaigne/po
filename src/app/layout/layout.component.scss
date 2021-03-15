@@ -1,62 +1,279 @@
-#titre {
-}
-
 .clignote {
-    animation: clignote 2s linear infinite;
+	animation: clignote 2s linear infinite;
 }
 @keyframes clignote {
-    50% {
-        opacity: 0;
-    }
+	50% {
+		opacity: 0;
+	}
 }
 a {
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
 }
 a:link {
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
 }
 
+.cv {
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	font-size: 35px;
+	margin: 2rem 0 2rem 0;
+	text-align: center;
+	text-transform: uppercase;
+	text-rendering: optimizeLegibility;
+
+	&.retroshadow {
+		color: #2c2c2c;
+		background-color: white;
+		letter-spacing: 0.05em;
+		text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+	}
+}
+
+
+.buttonRedirect {
+	margin-top: 1.5rem;
+	background-color: #212529;
+	border-radius: 5rem;
+	padding: 0.25rem 0.5rem;
+	transition: all 0.7s ease-out;
+	border-color: #212529;
+	a {
+	  color: white;
+	  text-decoration: none;
+	  font-weight: bold;
+	  font-size: 1.5rem;
+	}
+  }
 //------------------ Titre
 #titre {
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-    font-size: 90px;
-    padding: 10rem;
-    margin-top: 2rem;
-    text-align: center;
-    text-transform: uppercase;
-    text-rendering: optimizeLegibility;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	font-size: 90px;
+	padding: 10rem;
+	margin-top: 2rem;
+	text-align: center;
+	text-transform: uppercase;
+	text-rendering: optimizeLegibility;
 
-    &.retroshadow {
-        color: #2c2c2c;
-        background-color: white;
-        letter-spacing: 0.05em;
-        text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
-    }
+	&.retroshadow {
+		color: #2c2c2c;
+		background-color: white;
+		letter-spacing: 0.05em;
+		text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+	}
 }
 
 #titre2 {
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-    font-size: 65px;
-    padding: 1rem ;
-    margin-bottom: 14rem;
-    text-align: center;
-    text-transform: uppercase;
-    text-rendering: optimizeLegibility;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	font-size: 65px;
+	padding: 1rem;
+	margin-bottom: 10rem;
+	text-align: center;
+	text-transform: uppercase;
+	text-rendering: optimizeLegibility;
 
-    &.retroshadow {
-        color: #2c2c2c;
-        background-color: white;
-        letter-spacing: 0.05em;
-        text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
-    }
+	&.retroshadow {
+		color: #2c2c2c;
+		background-color: white;
+		letter-spacing: 0.05em;
+		text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+	}
 }
 
 //-----------
 
 .card {
-    margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
+
+// INDICATEUR DE SCROLL------------------------------
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.scroll-indicator {
+	margin: 0 auto 2rem auto;
+	position: relative;
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&::before {
+		width: 12px;
+		height: 12px;
+		border-radius: 10px;
+		border: 1px solid black;
+		animation: dot 3s infinite ease-in-out;
+	}
+	&::after {
+		width: 7px;
+		height: 7px;
+		border-right: 1px solid black;
+		border-bottom: 1px solid black;
+		transform: rotate(45deg);
+		animation: arrow 3s infinite ease-in-out;
+		animation-delay: 0.75s;
+		opacity: 0.25;
+	}
+	& > div {
+		display: block;
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			margin: 5px auto;
+			border-radius: 10px;
+			border: 1px solid black;
+			animation: dot 3s infinite ease-in-out;
+		}
+		&::before {
+			width: 8px;
+			height: 8px;
+			animation-delay: 0.25s;
+		}
+		&::after {
+			width: 6px;
+			height: 6px;
+			animation-delay: 0.5s;
+		}
+	}
+}
+
+@keyframes dot {
+	0% {
+		transform: scale(0.75);
+		opacity: 0.25;
+	}
+	25% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(0.75);
+		opacity: 0.25;
+	}
+}
+
+@keyframes arrow {
+	0% {
+		transform: scale(0.75) rotate(45deg);
+		opacity: 0.25;
+	}
+	25% {
+		transform: scale(1) rotate(45deg);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(0.75) rotate(45deg);
+		opacity: 0.25;
+	}
+}
+
+//------------------------ TIMELINE --------------
+.custom-marker {
+	display: flex;
+	width: 2rem;
+	height: 2rem;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+// -------------------- cercle ----------------
+#cercle {
+	width: 150px;
+	height: 150px;
+	background: white;
+	border-radius: 50%;
+}
+
+.skills {
+	margin: 5rem 0 5rem 0;
+}
+
+#angular {
+	margin: 35px 0 0 37px;
+}
+
+#mySQL{
+	margin: 20px 0 0 15px;
+}
+
+#php{
+	margin: 25px 0 0 30px;
+}
+
+#js{
+	margin: 35px 0 0 37px;
+}
+
+//-------- ANIMATION CARD --------------------
+
+div [class^="col-"] {
+	padding-left: 5px;
+	padding-right: 5px;
+  }
+  .card {
+	transition: 0.5s;
+  
+	margin-bottom: 2rem;
+  }
+  .card-title {
+	font-size: 15px;
+	transition: 1s;
+	cursor: pointer;
+  }
+  .card-title i {
+	font-size: 15px;
+	transition: 1s;
+	cursor: pointer;
+	color: #ffa710;
+  }
+  .card-title i:hover {
+	transform: scale(1.25) rotate(100deg);
+	color: #18d4ca;
+  }
+  .card:hover {
+	transform: scale(1.05);
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  }
+  .card-text {
+	height: 80px;
+  }
+  
+  .card::before,
+  .card::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: scale3d(0, 0, 1);
+	transition: transform 0.3s ease-out 0s;
+	background: rgba(255, 255, 255, 0.1);
+	content: "";
+	pointer-events: none;
+  }
+  .card::before {
+	transform-origin: left top;
+  }
+  .card::after {
+	transform-origin: right bottom;
+  }
+  .card:hover::before,
+  .card:hover::after,
+  .card:focus::before,
+  .card:focus::after {
+	transform: scale3d(1, 1, 1);
+  }

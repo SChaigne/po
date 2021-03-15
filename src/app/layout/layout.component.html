@@ -1,6 +1,9 @@
 <h1 id="titre" class="retroshadow">CHAIGNE Stéphane</h1>
 <h1 id="titre2" class="retroshadow">vous souhaite la bienvenue sur
     son portfolio ...<span class="clignote">|</span> </h1>
+<div class="scroll-indicator">
+    <div class="dots"></div>
+</div>
 <div class="d-flex justify-content-center">
     <div class="card shadow-lg p-3 mb-5 bg-white rounded">
         <div class="card-body">
@@ -8,30 +11,53 @@
             <p class="card-text">
                 Je suis CHAIGNE Stéphane, étudiant en <a routerLink="/BTS">BTS SIO - Option SLAM</a> en alternance avec
                 l'entreprise <a target="_blank" href="https://tinyurl.com/2vrhf7bb">
-                    CSMSI - LA POSTE</a>
+                    CSMSI - LA POSTE</a> au lycée Carcouët de Nantes
+                <br>
+                <button class="buttonRedirect">
+                    <a href="/assets/pdf/CV_CHAIGNE_Stéphane.pdf" target="_blank">Mon CV</a>
+                </button>
             </p>
         </div>
     </div>
 </div>
-Faire la timeline des mon CV<br>
-A Gauche la partie pro / a droite la partie ecole ( vu que c'est le même année)
-<p-timeline [value]="eventCours" styleClass="customized-timeline">
-    <ng-template pTemplate="marker"></ng-template>
-    <ng-template pTemplate="opposite" let-event>
-        <p-card [header]="event.status" [subheader]="event.date">
-            <p>blablabla</p>
-        </p-card>
-    </ng-template>
-    <ng-template pTemplate="marker" let-event>
-        <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
-            <i [ngClass]="event.icon"></i>
-        </span>
-    </ng-template>
-    <ng-template pTemplate="content" let-event>
-        <p-card class="card shadow-lg" [header]="event.status" [subheader]="event.date">
-            <ul style="list-style-type:none;">
-                <li *ngFor="let message of event.messages">{{message}}</li>
-            </ul>
-        </p-card>
-    </ng-template>
-</p-timeline>
+
+<div>
+    <p class="cv retroshadow">Expériences Professionelles</p>
+    <p-timeline [value]="eventPro" align="alternate" styleClass="customized-timeline">
+        <ng-template pTemplate="marker" let-event>
+            <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
+                <i [ngClass]="event.icon"></i>
+            </span>
+        </ng-template>
+        <ng-template pTemplate="content" let-event>
+            <p-card class="card shadow-lg" [header]="event.status" [subheader]="event.date">
+                <ul style="list-style-type:none;">
+                    <li *ngFor="let message of event.messages">{{message}}</li>
+                </ul>
+            </p-card>
+        </ng-template>
+    </p-timeline>
+</div>
+<div>
+    <p class="cv retroshadow">Formations</p>
+    <p-timeline [value]="eventCours" align="alternate" styleClass="customized-timeline">
+        <ng-template pTemplate="marker" let-event>
+            <span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
+                <i [ngClass]="event.icon"></i>
+            </span>
+        </ng-template>
+        <ng-template pTemplate="content" let-event>
+            <p-card class="card shadow-lg" [header]="event.status" [subheader]="event.date">
+                {{event.messages}}
+            </p-card>
+        </ng-template>
+    </p-timeline>
+</div>
+<p class="cv retroshadow">Mes technologies connu</p>
+<div class="skills d-flex justify-content-between">
+    <div id="cercle" class="card shadow-lg"><img src="assets/icons/angular-icon.svg" id="angular" width="50%"></div>
+    <div id="cercle" class="card shadow-lg"><img src="assets/icons/php.png" id="php" width="65%"></div>
+    <div id="cercle" class="card shadow-lg"><img src="assets/icons/mySQL.svg" id="mySQL" width="85%"></div>
+    <div id="cercle" class="card shadow-lg"><img src="assets/icons/csharp.png" id="c#" width="100%"></div>
+    <div id="cercle" class="card shadow-lg"><img src="assets/icons/js.png" id="js" width="50%"></div>
+</div>
