@@ -21,7 +21,7 @@ export class PPEComponent implements OnInit {
     }, {
       picture: "assets/img/vehiparc.png",
       title: "Véhiparc",
-      content: "WebApp qui permet la gestion de flotte de véhicule d'entreprise"
+      content: "WebApp qui permet la gestion de flotte de véhicules d'entreprise"
     }, {
       picture: "https://mdbootstrap.com/img/new/standard/nature/111.jpg",
       title: "Application Mobile pour infirmier",
