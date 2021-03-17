@@ -71,7 +71,7 @@ export class LayoutComponent implements OnInit {
         icon: PrimeIcons.CALENDAR,
         color: '#212529',
         messages: ["Developpement Angular",
-          "Refonte du desgin de Vehiparc",
+          "UI du site Vehiparc en suivant une maquette",
           "UI/UX de l'aide de Vehiparc",
           "Méthode Agile - SCRUM",
         ]
