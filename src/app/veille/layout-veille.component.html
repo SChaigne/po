@@ -1,10 +1,16 @@
 <h1 id="titre" class="d-flex justify-content-center">Présentations des veilles </h1>
 <div class="d-flex justify-content-center">
-    <button id="Technologique" class="choixPage positionboutton" (click)="changePage()"><a
-            routerLink="Technologique">Technologique</a></button>
+    <a routerLink="Technologique" class="choixPage positionboutton">
+        <button id="Technologique" (click)="changePage()">
+            Technologique
+        </button>
+    </a>
 
-    <button id="Juridique" class="choixPage positionboutton" (click)="changePage()"><a
-            routerLink="Juridique">Juridique</a></button>
+    <a routerLink="Juridique" class="choixPage positionboutton">
+        <button id="Juridique" (click)="changePage()">
+            Juridique
+        </button>
+    </a>
 </div>
 
 <div *ngIf="!pageAfficher">

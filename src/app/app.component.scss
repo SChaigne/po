@@ -4,9 +4,9 @@
 }
 
 .barreNav {
-    width: 50%;
+    width: 60%;
     border-radius: 0rem 0rem 5rem 5rem;
-    margin-left: 25%;
+    margin-left: 20%;
     // background-color: #212529!important;
 }
 
@@ -22,14 +22,14 @@ padding : 0.7rem 1rem 0.5rem;
 .menu-blanc{
     color: white;
     margin-left: 0.5rem ;
-
+    border-radius: 5rem; 
 }
 
 .menu-blanc:hover{
     border-radius: 5rem; 
     background-color: white;
     color:#212529;
-    transition: all 0.7s ease-out ;
+    transition: all 0.7s ease-in-out ;
 }
 
 .selectedRoute{
