@@ -1,7 +1,11 @@
 <h1 id="titre" class="d-flex justify-content-center">Présentations des projets </h1>
+<button *ngIf="vretour != ''" id="retour" (click)="resetProjet()" class="buttonReturn">
+    Retour
+</button>
 <div class="row d-flex justify-content-center mb-5">
 
-    <div class="col-md-3 col-sm-6 card-projet" (click)="onItemClick($event, 'PortFolio')">
+    <div *ngIf="vretour == 'PortFolio' || vretour == ''" class="col-md-3 col-sm-6 card-projet"
+        (click)="onItemClick($event, 'PortFolio')">
         <div class="card shadow-lg">
             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 <img src="assets/img/portfolio.png" class="img-fluid" />
@@ -13,7 +17,8 @@
             </div>
         </div>
     </div>
-    <div class="col-md-3 col-sm-6 card-projet" (click)="onItemClick($event, 'Vehiparc')">
+    <div *ngIf="vretour == 'Vehiparc' || vretour == ''" class="col-md-3 col-sm-6 card-projet"
+        (click)="onItemClick($event, 'Vehiparc')">
         <div class="card shadow-lg">
             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 <img src="assets/img/vehiparc.png" class="img-fluid" />
@@ -26,7 +31,8 @@
             </div>
         </div>
     </div>
-    <div class="col-md-3 col-sm-6 card-projet" (click)="onItemClick($event, 'AppMobile')">
+    <div *ngIf="vretour == 'AppMobile' || vretour == ''" class="col-md-3 col-sm-6 card-projet"
+        (click)="onItemClick($event, 'AppMobile')">
         <div class="card shadow-lg">
             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 <img src="assets/img/ppe4_chaigne.jpg" class="img-fluid" />
@@ -38,7 +44,21 @@
             </div>
         </div>
     </div>
+    <div *ngIf="vretour == 'Videotheque' || vretour == ''" class="col-md-3 col-sm-6 card-projet"
+        (click)="onItemClick($event, 'Videotheque')">
+        <div class="card shadow-lg">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="assets/img/ppe3_chaigne.jpg" class="img-fluid" />
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Application Web d'emprunt de film</h5>
+                <p class="card-text">Application d'emprunt de film pour des abonnées
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
+
 <!-- <div *ngIf="vretour" class="A METTRE UNE ANIMATION">
     <div class="d-flex">
         <div class="card shadow-lg p-3 mb-5 bg-white rounded">
@@ -86,7 +106,8 @@
                 <div class="card-body">
                     <h5 class="card-title">Véhiparc</h5>
                     <p class="card-text">Véhiparc est une application Web permettant la gestion de flotte de véhicules
-                        d'entreprise. Le développement est réalisé par le CSMSI - LA POSTE , la maîtrise d'ouvrage est une
+                        d'entreprise. Le développement est réalisé par le CSMSI - LA POSTE , la maîtrise d'ouvrage est
+                        une
                         branche de La Poste: Vehiposte.
                         <br>Ma mission sur ce projet a été de changer le design du site en suivant une charte graphique
                         ainsi que de réaliser un système d'aide pour mieux comprendre certaines pages qui peuvent être
@@ -105,6 +126,19 @@
                 </div>
             </div>
         </div>
+        <div style="margin-bottom: 1.5rem;">
+            <div class="">
+                <img src="assets/img/vehiparc-pres1.png" class="img-presentation shadow-lg rounded">
+            </div>
+            <br>
+            <div>
+                <img src="assets/img/vehiparc-pres2.png" class="img-presentation shadow-lg rounded">
+            </div>
+            <br>
+            <div>
+                <img src="assets/img/vehiparc-pres3.png" class="img-presentation shadow-lg rounded">
+            </div>
+        </div>
     </div>
     <div *ngSwitchCase="'AppMobile'">
         <div class="d-flex">
@@ -112,11 +146,47 @@
                 <div class="card-body">
                     <h5 class="card-title">Application Mobile</h5>
                     <p class="card-text">
-                        Le projet est une application Mobile permettant la gestion des rendez-vous pour les
-                        infirmier à domicile. Ce projet à été réalisé dans le cadre de PPE (Projet Personnel Encadré)
+                        Le projet est une application mobile permettant la gestion des rendez-vous pour les
+                        infirmiers à domicile. Ce projet à été réalisé dans le cadre de PPE (Projet Personnel Encadré)
                         au sein de l'établissement scolaire Lycée Carcouët
-                        <br> Ce projet est réalisé avec le framework Flutter qui utilise le langage Dart.
+                        <br> Ce projet est réalisé avec le langage JAVA.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-bottom: 1.5rem;" class="d-inline-flex">
+            <div>
+                <img src="assets/img/ppe4/ppe4-pres1.jpg" style="padding-right: 0.7rem;" class="img-presentation-ppe4 shadow-lg rounded">
+            </div>
+            <br>
+            <div>
+                <img src="assets/img/ppe4/ppe4-pres2.jpg" style="padding-right: 0.7rem;" class="img-presentation-ppe4 shadow-lg rounded">
+            </div>
+            <br>
+            <div>
+                <img src="assets/img/ppe4/ppe4-pres3.jpg" style="padding-right: 0.7rem;" class="img-presentation-ppe4 shadow-lg rounded">
+            </div>
+            <br>
+            <div>
+                <img src="assets/img/ppe4/ppe4-pres4.jpg" style="padding-right: 0.7rem;" class="img-presentation-ppe4 shadow-lg rounded">
+            </div>
+            <br>
+            <div>
+                <img src="assets/img/ppe4/ppe4-pres5.jpg" class="img-presentation-ppe4 shadow-lg rounded">
+            </div>
+        </div>
+    </div>
 
+    <div *ngSwitchCase="'Videotheque'">
+        <div class="d-flex">
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                    <h5 class="card-title">Application Mobile</h5>
+                    <p class="card-text">
+                        Le projet est une application web permettant la gestion d'emprunt de films. Ce projet à été
+                        réalisé dans le cadre de PPE (Projet Personnel Encadré)
+                        au sein de l'établissement scolaire Lycée Carcouët
+                        <br> Ce projet est réalisé avec le langage JAVA.
                     </p>
                 </div>
             </div>

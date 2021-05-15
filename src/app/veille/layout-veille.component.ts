@@ -13,12 +13,7 @@ export class LayoutVeilleComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-
     }
-
-  
-  
-
 
   changePage(){
     if(this.router.url.endsWith("/Juridique")){
