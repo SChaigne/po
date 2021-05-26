@@ -1,67 +1,148 @@
-.choixPage {
-    background-color: #212529;
-    border-radius: 5rem;
-    transition: all 0.7s;
-    border-color: #212529;
-    border: solid #212529;
-    button {
-        background-color: #212529;
-        transition: all 0.7s;
-        border-color: #00000000;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.5rem;
-        border-radius: 5rem;
-    }
-}
-.choixPage:hover {
-    background-color: white;
+// .choixPage {
+//     background-color: #212529;
+//     border-radius: 5rem;
+//     transition: all 0.7s;
+//     border-color: #212529;
+//     border: solid #212529;
+//     button {
+//         background-color: #212529;
+//         transition: all 0.7s;
+//         border-color: #00000000;
+//         color: white;
+//         text-decoration: none;
+//         font-weight: bold;
+//         font-size: 1.5rem;
+//         border-radius: 5rem;
+//     }
+// }
+// .choixPage:hover {
+//     background-color: white;
     
-    border: solid #212529;
-    button {
-        color: #212529;
-        background-color: transparent;
-    }
-}
+//     border: solid #212529;
+//     button {
+//         color: #212529;
+//         background-color: transparent;
+//     }
+// }
 
-.positionboutton {
-    margin-top: 1rem;
-    margin-right: 3rem;
-}
+// .positionboutton {
+//     margin-top: 1rem;
+//     margin-right: 3rem;
+// }
 
-label {
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-    font-size: 65px;
-    text-align: center;
-    text-transform: uppercase;
-    text-rendering: optimizeLegibility;
+// label {
+//     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+//     font-size: 65px;
+//     text-align: center;
+//     text-transform: uppercase;
+//     text-rendering: optimizeLegibility;
 
-    &.retroshadow {
-        color: #2c2c2c;
-        background-color: white;
-        letter-spacing: 0.05em;
-        text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
-    }
-}
+//     &.retroshadow {
+//         color: #2c2c2c;
+//         background-color: white;
+//         letter-spacing: 0.05em;
+//         text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+//     }
+// }
 
 #titre {
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
-.positiondefinition{
-    margin-top: 1.5rem;
+// .positiondefinition{
+//     margin-top: 1.5rem;
+// }
+
+// #Technologique{
+//     outline: none;
+// }
+
+// #Juridique{
+//     outline: none;
+// }
+
+// .positiondefinition {
+//     margin-top: 10rem;
+// }
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------
+
+.intro {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
 }
 
-#Technologique{
-    outline: none;
+.la-veille {
+    text-decoration: none;
+    color: black;
 }
 
-#Juridique{
-    outline: none;
+.les-veilles {
+    margin-bottom: 3rem;
 }
 
 .positiondefinition {
-    margin-top: 10rem;
+    margin-top: 1.5rem;
+}
+
+// animation cards ------------------------
+div [class^="col-"] {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.card {
+    transition: 0.5s;
+
+    margin-bottom: 2rem;
+}
+.card-title {
+    font-size: 15px;
+    transition: 1s;
+    cursor: pointer;
+}
+.card-title i {
+    font-size: 15px;
+    transition: 1s;
+    cursor: pointer;
+    color: #ffa710;
+}
+.card-title i:hover {
+    transform: scale(1.25) rotate(100deg);
+    color: #18d4ca;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+.card-text {
+    height: 80px;
+}
+
+.card::before,
+.card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale3d(0, 0, 1);
+    transition: transform 0.3s ease-out 0s;
+    background: rgba(255, 255, 255, 0.1);
+    content: "";
+    pointer-events: none;
+}
+.card::before {
+    transform-origin: left top;
+}
+.card::after {
+    transform-origin: right bottom;
+}
+.card:hover::before,
+.card:hover::after,
+.card:focus::before,
+.card:focus::after {
+    transform: scale3d(1, 1, 1);
 }

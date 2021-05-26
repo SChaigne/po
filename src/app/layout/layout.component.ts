@@ -66,14 +66,15 @@ export class LayoutComponent implements OnInit {
     ]
     this.eventPro = [
       {
-        status: 'CSMSI - La Poste',
+        status: 'Appenti BTS Développeur / CSMSI - La Poste',
         date: '2020 - 20**',
         icon: PrimeIcons.CALENDAR,
         color: '#212529',
-        messages: ["Developpement Angular",
+        messages: ["Développement Angular",
           "UI du site Vehiparc en suivant une maquette",
-          "UI/UX de l'aide de Vehiparc",
+          "UX de l'aide de Vehiparc",
           "Méthode Agile - SCRUM",
+          "Relationnel client",
         ]
       },
       {
@@ -91,7 +92,7 @@ export class LayoutComponent implements OnInit {
         ]
       },
       {
-        status: 'Apprenti Bac PROElectricien / STXFRANCE – Saint-Nazaire',
+        status: 'Apprenti Bac PRO Electricien / STXFRANCE – Saint-Nazaire',
         date: '2014-2017',
         icon: PrimeIcons.CALENDAR,
         color: '#212529',

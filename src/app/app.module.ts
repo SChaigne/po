@@ -16,6 +16,7 @@ import { CardModule } from 'primeng/card';
 import { FormsModule } from "@angular/forms";
 import { VJuridiqueComponent } from './veille/v-juridique/v-juridique.component';
 import { VTechnoComponent } from './veille/v-techno/v-techno.component';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 const appRoutes: Routes = [
   { path: 'Projets', component: PPEComponent },
@@ -51,7 +52,7 @@ const appRoutes: Routes = [
     FormsModule,
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
